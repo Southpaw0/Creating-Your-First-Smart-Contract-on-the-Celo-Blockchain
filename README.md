@@ -1,13 +1,13 @@
-# Introduction​
+## Introduction​
 In this article, we will be building a crowdfunding smart contract using [hardhat](https://hardhat.org/) and deploying the smart contract to the Celo blockchain. Hardhat is a development environment for Ethereum software. With hardhat, you can write your smart contract, deploy them, run tests, and debug your code.
 
-# Prerequisites​
+## Prerequisites​
 For the purpose of this article, you will need to have basic knowledge of the solidity language and javascript.
 
-# Requirements​
+## Requirements​
 Having a code editor, VScode preferably, a chrome browser and the Celo wallet extension installed on your chrome browser is a requirement for this tutorial. If you don’t have the Celo wallet extension installed, follow this video tutorial on how to [install the Celo wallet extension](https://youtu.be/KD_0kKxtl8c) [on your chrome browser](https://youtu.be/KD_0kKxtl8c).
 
-# The Crowdfunding Smart Contract
+## The Crowdfunding Smart Contract
 To set up the project, open a terminal and run these commands.
 
 ```bash
@@ -29,7 +29,7 @@ npx run hardhat
 
 Select `Create a Javascript Project` and follow the steps. This sets up a new Hardhat project.
 
-# Writing The Smart Contract Code
+## Writing The Smart Contract Code
 Now that your project has been set up, create a new file in the contracts directory called `CrowdFunding.sol`.
 
 At the top of the `CrowdFunding.sol`, we indicate the license and the solidity version we intend to use.
@@ -159,7 +159,7 @@ npx hardhat compile
 
 ```
 
-# Configure Deployment
+## Configure Deployment
 As I mentioned earlier, we will be deploying the smart contract to the Celo test blockchain. To do this, we will need to connect to the Alfajores testnet through forno by writing a deployment script. first, we will replace the content of the default `hardhat.config.js` file provided to us by hardhat with the [configuration code](https://github.com/celo-org/DevRel/blob/main/configuration/hardhat.config.js) for deployment made available by Celo.
 
 ```javascript
@@ -238,7 +238,7 @@ MNEMONIC=//Go to your celo wallet, copy and paste your 24 key phrase
 
 ```
 
-# Deploy to Celo
+## Deploy to Celo
 Run the following command in your project root directory to deploy your smart contract to the Celo Alfajores testnet.
 
 ```bash
@@ -246,20 +246,20 @@ npx hardhat run scripts/deploy.js --network alfajores
 
 ```
 
-# View Contract Deployment
+## View Contract Deployment
 To view your deployed smart contract, copy the smart contract address from the terminal and navigate to the block explorer to search for your deployed contract.
 
-## Conclusion​
+### Conclusion​
 So far, we have been able to initialize our project folder, create a crowdfunding smart contract with solidity, configure the hardhat.config.js and successfully deploy the smart contract to the Celo blockchain.
 
-## Next Steps​
+### Next Steps​
 The next step is to verify your smart contract on the Celo explorer. Follow the guidelines in this Celo doc to [verify your smart contract on Celo explorer](https://explorer.celo.org/).
 
 
-## About the Author​
+### About the Author​
 [Israel Okunaya](https://meetisraelokunaya.curious.page/) is a food and blockchain writer, content marketer and a product manager with a flair for simplifying complexities especially in the blockchain and web3 space. 
 
-## References​
+### References​
 Check out the [Celo docs](https://docs.celo.org/) for more information on building on the Celo blockchain.
 You can also check out [Learnweb3 Dao](https://learnweb3.io/) for more web3 content and courses.
 
